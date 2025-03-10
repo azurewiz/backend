@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-const HomeLayout = (
+const RootLayout = (
   { children }: Readonly<{ children: ReactNode }>
 ) => {
   return (
@@ -10,4 +10,4 @@ const HomeLayout = (
   );
 };
 
-export default HomeLayout;
+export default RootLayout;

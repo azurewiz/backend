@@ -2,10 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 const NavHeader = () => {
-  const pathname = usePathname();
   return (
     <nav className="flex-between fixed 
       z-50 w-full 

@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Istok_Web } from "next/font/google";
 import "./globals.css";
+import { AuthProvider } from "@/context/AuthContext";
+import ProtectedLayout from "@/components/ProtectedLayout";
+import ClientWrapper from "@/components/ClientWrapper";
 
 const istokWeb = Istok_Web(
   {
@@ -25,7 +28,13 @@ export default function RootLayout({
       <body
         className={istokWeb.className}
       >
-        {children}
+        <AuthProvider>
+          <ClientWrapper>
+            <ProtectedLayout>
+              {children}
+            </ProtectedLayout>
+          </ClientWrapper>
+        </AuthProvider>
       </body>
     </html>
   );
